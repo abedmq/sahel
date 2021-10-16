@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\UpdateFileImage;
 use App\Models\Letter;
 use App\Models\LetterFile;
 use Illuminate\Http\Request;
@@ -49,10 +50,11 @@ class LetterController extends Controller
 
     function files($type = 'letter')
     {
-        $file = LetterFile::whereHas('letter', function ($q) {
-            $q->type('letter');
-        })->findOrFail($id);
-
+        $files = LetterFile::whereHas('letter', function ($q) use ($type) {
+            $q->type($type);
+        })->paginate(15);
+        $title = Letter::title($type);
+        return view('front.files.index', compact('files', 'title'));
     }
 
 
@@ -82,6 +84,10 @@ class LetterController extends Controller
     function filesShow($id)
     {
         $file = LetterFile::with('letter')->findOrFail($id);
+        if (!$file->image_preview) {
+            UpdateFileImage::dispatch($file);
+            return  $this->response()->route('letters.files')->error('الرجاء انتظار حتى ينتهي من اعداد صورة المشاركة');
+        }
         return view('front.files.show', compact('file'));
     }
 }

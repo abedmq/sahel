@@ -75,7 +75,7 @@ class UpdateFileImage implements ShouldQueue
 //                $backColor = $letter->getStyle($key, 'background');
                 $text_color = hex_color_allocate($im, $color);
 //                $background_color = hex_color_allocate($im, $backColor);
-                $val = $Glyphs->utf8Glyphs($this->file->variable[$key]);
+                $val = $Glyphs->utf8Glyphs($this->file->variable[$key]??'asd');
 
                 $fontwidth = ImageTTFBBox($fz, 0, $IBM, $val);
                 $var_width = abs($fontwidth[4] - $fontwidth[0]);
@@ -113,7 +113,7 @@ class UpdateFileImage implements ShouldQueue
                 'preview_date' => Carbon::now(),
             ]);
 
-            
+
 
 //            generate pdf file
             return $path;

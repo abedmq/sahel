@@ -29,6 +29,12 @@ class CustomResponse implements Responsable
         return $this;
     }
 
+    function back(): self
+    {
+        $this->redirect = redirect()->getUrlGenerator()->previous() ;
+        return $this;
+    }
+
     function view($name, $var = []): self
     {
         $this->viewName = $name;

@@ -1,6 +1,6 @@
 <div class="d-flex align-items-center">
     <!--begin::Button-->
-    <a href="#" class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">معاينة</a>
+    <a href="{{url('')}}" class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">الرئيسية</a>
     <!--end::Button-->
 {{--    <!--begin::Dropdown-->--}}
 {{--    <div class="dropdown dropdown-inline ml-2" data-toggle="tooltip" title="Quick actions" data-placement="top">--}}

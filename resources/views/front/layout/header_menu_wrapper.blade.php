@@ -43,7 +43,7 @@
                             </div>
                         </li>
                         <li class="menu-item " data-menu-toggle="hover" aria-haspopup="true">
-                            <a href="{{route('letters.files','letters')}}" class="menu-link">
+                            <a href="{{route('letters.files')}}" class="menu-link">
 																<span class="svg-icon menu-icon">
 																	<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo2\dist/../src/media/svg/icons\Communication\Clipboard-list.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -101,7 +101,7 @@
                 <div class="menu-submenu menu-submenu-classic menu-submenu-left">
                     <ul class="menu-subnav">
                         <li class="menu-item " data-menu-toggle="hover" aria-haspopup="true">
-                            <a href="{{route('galleries.index')}}" class="menu-link ">
+                            <a href="{{route('galleries.show',\App\Models\Album::type('galleries')->sort()->first()->id)}}" class="menu-link ">
                                         <span class="svg-icon menu-icon">
                                          <!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo2\dist/../src/media/svg/icons\Design\Image.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

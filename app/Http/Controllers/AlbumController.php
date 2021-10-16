@@ -13,6 +13,6 @@ class AlbumController extends Controller
     {
         $album = Album::findOrFail($id);
         $title='مرفقات جاهزة للتحميل';
-        return view('front.albums.create', compact('album','title'));
+        return view('front.albums.show', compact('album','title'));
     }
 }

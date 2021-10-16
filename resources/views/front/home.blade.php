@@ -40,7 +40,7 @@
                             <!--begin::Card-->
                             <div class="card card-custom ">
                                 <div class="card-body p-0">
-                                    <a href="{{route('letters.index')}}">
+                                    <a href="{{route('letters.index','thanks')}}">
                                         <!--begin::Image-->
                                         <div class="overlay">
                                             <div class="overlay-wrapper rounded bg-light text-center"
@@ -65,7 +65,7 @@
                             <!--begin::Card-->
                             <div class="card card-custom ">
                                 <div class="card-body p-0">
-                                    <a href="{{route('letters.index')}}">
+                                    <a href="{{url('')}}">
                                         <!--begin::Image-->
                                         <div class="overlay">
                                             <div class="overlay-wrapper rounded bg-light text-center"
@@ -91,7 +91,7 @@
                             <!--begin::Card-->
                             <div class="card card-custom ">
                                 <div class="card-body p-0">
-                                    <a href="{{route('letters.index')}}">
+                                    <a href="{{route('galleries.show',\App\Models\Album::type('galleries')->sort()->first()->id)}}">
                                         <!--begin::Image-->
                                         <div class="overlay">
                                             <div class="overlay-wrapper rounded bg-light text-center"

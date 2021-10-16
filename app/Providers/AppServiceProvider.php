@@ -44,6 +44,7 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('front/*', function ($view) {
             $view->with('user', auth()->user());
+            \cache()->flush();
             $view->with('letters',
                 Cache::remember('letters', 60 * 60, function () {
                     return Letter::type()->sort()->get();
@@ -52,7 +53,7 @@ class AppServiceProvider extends ServiceProvider
 
             $view->with('albums',
                 Cache::remember('albums', 60 * 60, function () {
-                    return Album::type('ready_attachment')->sort()->get();
+                    return Album::type('ready_attachment')->with('files')->sort()->get();
                 })
             );
 

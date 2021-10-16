@@ -18,7 +18,6 @@
                         </li>
                         <!--end::Nav Item-->
 
-
                         <!--begin::Nav Item-->
                         <li class="navi-item mb-2">
                             <a class="navi-link" href="{{url($file->image_preview)}}" download="{{$file->letter->title}}.jpg">

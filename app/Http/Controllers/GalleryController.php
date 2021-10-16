@@ -9,10 +9,14 @@ use Illuminate\Http\Request;
 class GalleryController extends Controller
 {
     //
-    function index()
+    function index($id = 0)
     {
-        $albums = Album::type('galleries')->with('files')->paginate(25);
+        $galleries = Album::type('galleries')->sort()->with('files')->get();
+        $gallery=null;
+        if ($id)
+            $gallery = Album::type('galleries')->find($id);
+
         $title = "معرض الصور";
-        return view('front.letters.create', compact('albums', 'title'));
+        return view('front.galleries.show', compact('galleries','gallery', 'title'));
     } //
 }
