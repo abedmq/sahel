@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'IBM Plex Arabic';
+    font-style: Medium;
+    font-weight: 400;
+    src: url('IBM Plex Arabic SemiBold.otf') format('opentype')
+}
+
+@font-face {
+    font-family: 'IBM Plex Arabic';
+    font-style: Bold;
+    font-weight: 500;
+    src: url('IBM Plex Arabic Bold.otf') format('opentype')
+}
+
+@font-face {
+    font-family: 'IBM Plex Arabic';
+    font-style: Regular;
+    font-weight: 100;
+    src: url('IBM Plex Arabic Regular.otf') format('opentype')
+}
+
+span, h1, h2, h3, h4, h5, h6, div, b, strong, p, section, ul, li ,.btn{
+    /*font-family:'DIN Next LT Arabic Regular' !important; ;*/
+    font-family: 'IBM Plex Arabic';
+
+}
+

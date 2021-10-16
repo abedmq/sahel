@@ -1,0 +1,37 @@
+.btn .loader.fa-spinner {
+    border-radius: 100%;
+    background-color: transparent;
+    opacity: 1;
+    -webkit-animation: fa-spin 2s linear infinite;
+    animation: fa-spin 2s linear infinite;
+    width: auto;
+    height: auto;
+}
+
+.image-preview{
+    width: 80px;
+}
+
+#preview-image{
+    float: right;
+}
+
+.preview-card .card-body{
+    width: 100%;
+    position: relative;
+    padding:0 !important;
+
+}
+.file-input,.file-input-text{
+    display: none;
+}
+
+.file-label{
+    cursor: pointer;
+}
+
+
+span.preview-variables{
+    font-size: 25px;
+    font-weight: 100;
+}
